@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.tutorialsninja.qa.testcases.RegisterPageTest" class="method navigator-link" hash-for-method="verifyHomeTitle">verifyHomeTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.tutorialsninja.qa.testcases.RegisterPageTest" class="method navigator-link" hash-for-method="verifyRegister">verifyRegister</a> <!-- method navigator-link -->
@@ -131,6 +136,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="verifyHomeTitle">
+                  </a> <!-- verifyHomeTitle -->
+                  <span class="method-name">verifyHomeTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifyRegister">
                   </a> <!-- verifyRegister -->
                   <span class="method-name">verifyRegister</span>
@@ -155,6 +167,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.tutorialsninja.qa.extentReport.ExtentReportListeners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.tutorialsninja.qa.testcases.RegisterPageTest&quot;/&gt;
@@ -197,15 +212,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyRegister')
 data.setCell(0, 2, 'com.tutorialsninja.qa.testcases.RegisterPageTest')
-data.setCell(0, 3, 3885);
+data.setCell(0, 3, 3856);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyTitle')
 data.setCell(1, 2, 'com.tutorialsninja.qa.testcases.RegisterPageTest')
-data.setCell(1, 3, 1377);
+data.setCell(1, 3, 1690);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyHomeTitle')
+data.setCell(2, 2, 'com.tutorialsninja.qa.testcases.RegisterPageTest')
+data.setCell(2, 3, 32);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -242,24 +261,36 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyTitle</span>
-                <span class="method-start">14312 ms</span>
+                <span class="method-name">verifyHomeTitle</span>
+                <span class="method-start">11990 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15711 ms</span>
+                <span class="method-start">12028 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">17194 ms</span>
+                <span class="method-start">12604 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyRegister</span>
-                <span class="method-start">23288 ms</span>
+                <span class="method-name">verifyTitle</span>
+                <span class="method-start">19354 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">27206 ms</span>
+                <span class="method-start">21053 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">21696 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyRegister</span>
+                <span class="method-start">27718 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">31592 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
