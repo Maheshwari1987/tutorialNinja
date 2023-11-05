@@ -66,4 +66,10 @@ public class RegisterPage extends TestBase {
 		registry.click();
 		return driver.getTitle();
 	}
+	
+	public String getHomeTitle()
+	{
+		return driver.getTitle();
+		
+	}
 }

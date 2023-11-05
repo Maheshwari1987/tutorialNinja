@@ -39,6 +39,13 @@ public class RegisterPageTest extends TestBase {
 		
 	}
 	
+	@Test
+	public void verifyHomeTitle()
+	{
+		String HomeTitle = registerPage.getHomeTitle();
+		Assert.assertEquals("Your Store", HomeTitle , "Home title is matching" );
+	}
+	
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
